@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.percentlayout.widget.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/bill_occupy"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_heightPercent="3%"
+        app:layout_widthPercent="100%"/>
+
+    <RadioGroup
+        android:id="@+id/bill_RGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bill_occupy"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/bill_record"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="记账"
+            android:textSize="25dp"
+            android:textColor="@drawable/selector_text"
+            android:checked="true"/>
+        <RadioButton
+            android:id="@+id/bill_budget"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="预算"
+            android:textSize="25dp"
+            android:textColor="@drawable/selector_text"/>
+
+        <RadioButton
+            android:id="@+id/bill_statement"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="报表"
+            android:textSize="25dp"
+            android:textColor="@drawable/selector_text"/>
+    </RadioGroup>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/bill_VPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/bill_RGroup" />
+</androidx.percentlayout.widget.PercentRelativeLayout>

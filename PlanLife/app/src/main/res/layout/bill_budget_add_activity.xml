@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.percentlayout.widget.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/bill_budget_add_occupy"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_heightPercent="3%"
+        app:layout_widthPercent="100%"/>
+    <TextView
+        android:id="@+id/bill_budget_add_plug"
+        android:layout_below="@+id/bill_budget_add_occupy"
+        android:text="增加预算"
+        android:textSize="35dp"
+        android:gravity="center"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_heightPercent="7%"
+        app:layout_widthPercent="100%"/>
+    <EditText
+        android:id="@+id/bill_budget_add_cheek"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:inputType="numberDecimal"
+        android:hint="0.00"
+        android:textSize="35dp"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:layout_below="@+id/bill_budget_add_plug"
+        app:layout_heightPercent="10%"/>
+    <GridView
+        android:id="@+id/bill_budget_add_gridview"
+        android:layout_below="@+id/bill_budget_add_cheek"
+        android:focusable="true"
+        android:numColumns="5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_heightPercent="80%"
+        app:layout_widthPercent="100%"/>
+</androidx.percentlayout.widget.PercentRelativeLayout>

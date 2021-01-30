@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.percentlayout.widget.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="70dp">
+    <androidx.percentlayout.widget.PercentRelativeLayout
+        android:id="@+id/programme_habit_data_layout"
+        android:layout_toLeftOf="@+id/programme_habit_data_begin"
+        android:layout_width="match_parent"
+        android:layout_height="70dp">
+        <TextView
+            android:id="@+id/programme_habit_data_name"
+            android:text="名字"
+            android:textSize="35dp"
+            android:layout_alignParentTop="true"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            app:layout_widthPercent="100%"/>
+        <TextView
+            android:id="@+id/programme_habit_data_significance"
+            android:text="重要程度"
+            android:textSize="25dp"
+            android:gravity="right|center_horizontal"
+            android:layout_below="@+id/programme_habit_data_name"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            app:layout_widthPercent="100%"/>
+
+    </androidx.percentlayout.widget.PercentRelativeLayout>
+
+    <ImageButton
+        android:id="@+id/programme_habit_data_begin"
+        android:src="@mipmap/icon_programme_habit_begin"
+        android:background="@drawable/bill_record_add_shape"
+        android:layout_alignParentRight="true"
+        android:layout_width="70dp"
+        android:layout_height="70dp"/>
+</androidx.percentlayout.widget.PercentRelativeLayout>

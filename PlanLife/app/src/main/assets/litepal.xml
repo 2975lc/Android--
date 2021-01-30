@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<litepal>
+    <dbname value="Database"></dbname>
+    <version value="5"></version>
+    <list>
+        <mapping class="com.lz2975.Bill.Bill_record_data"></mapping>
+        <mapping class="com.lz2975.Bill.Bill_budget_data"></mapping>
+        <mapping class="com.lz2975.Bookrack.Book_data"></mapping>
+        <mapping class="com.lz2975.Programme.Programme_habit_data"></mapping>
+        <mapping class="com.lz2975.Programme.Programme_backlog_data"></mapping>
+    </list>
+</litepal>

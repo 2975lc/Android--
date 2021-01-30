@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.percentlayout.widget.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/ViewPager"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="1">
+
+    </androidx.viewpager.widget.ViewPager>
+    <com.lz2975.WheelView
+        android:id="@+id/wheelview_year"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        app:layout_widthPercent="50%"/>
+    <com.lz2975.WheelView
+        android:id="@+id/wheelview_month"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        app:layout_widthPercent="50%"/>
+    <RadioGroup
+        android:id="@+id/bill_statement_RGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/wheelview_year"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/bill_statement_RGroup_expend"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="支出"
+            android:textSize="25dp"
+            android:textColor="@drawable/selector_text"
+            android:checked="true"/>
+        <RadioButton
+            android:id="@+id/bill_statement_RGroup_income"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="收入"
+            android:textSize="25dp"
+            android:textColor="@drawable/selector_text"/>
+    </RadioGroup>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/bill_statement_recycler"
+        android:divider="@null"
+        android:listSelector="@android:color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/bill_statement_RGroup"/>
+</androidx.percentlayout.widget.PercentRelativeLayout>
